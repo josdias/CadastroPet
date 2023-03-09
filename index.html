@@ -15,98 +15,108 @@
 <body>
     <header></header>
     <main>
-        <div class="container">
+        <div class="centro">
             <!-- <h1 class="titulo">Cadastro do Pet</h1> -->
-            <div class="box">
-
+            <div class="container box" id="box">
                 <div class="login">
-                    <form action="#" method="POST" class="formularioLogin"></form>
-                    <h3> Seja Bem vindo!</h3>
+                    <div id="login">
+                        <form action="#" method="POST" class="formularioLogin"></form>
+                        <h3> Seja Bem vindo!</h3>
 
-                    <div>
-                        <div class="organizacaoLogin">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email">
+                        <div>
+                            <div class="organizacaoLogin">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email">
+                            </div>
+
+                            <div class="organizacaoLogin">
+                                <label for="senha">Senha:</label>
+                                <input type="password" name="senha">
+                            </div>
+                        </div>
+                        <button type="submit" class="botao">Login</button>
+                    </div>
+
+
+                    <button id="abrir-popup" id="abrir-poupup" onclick="abrirCadastro()">Cadastre-se</button>
+                    <div id="popup" class="cadastro">
+                        <div class="btnFechar">
+                            <button class="fechar-popup" id="fechar-popup" onclick="fecharCadastro()">X</button>
                         </div>
 
-                        <div class="organizacaoLogin">
-                            <label for="senha">Senha:</label>
-                            <input type="password" name="senha">
+                        <div>
+                            <form action="#" method="POST" class="formularioCadastro">
+                                <h3>Dados do Pet</h3>
+
+                                <div class="organizacao">
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" id="nome" name="nome" required>
+                                </div>
+
+                                <div class="organizacao">
+                                    <label for="idade">Idade:</label>
+                                    <input type="number" id="idade" name="idade" required>
+                                </div>
+
+                                <div class="organizacao">
+                                    <label for="especie">Espécie:</label>
+                                    <select id="especie" name="especie" required>
+                                        <option value="cachorro">Cachorro</option>
+                                        <option value="gato">Gato</option>
+                                        <option value="passaro">Pássaro</option>
+                                    </select>
+                                </div>
+
+                                <div class="organizacao">
+                                    <label for="raca">Raça:</label>
+                                    <input type="text" id="raca" name="raca" required>
+                                </div>
+
+                                <div class="organizacao">
+                                    <label for="sexo">Sexo:</label>
+                                    <select id="sexo" name="sexo" required>
+                                        <option value="femea">Fêmea</option>
+                                        <option value="macho">Macho</option>
+                                    </select>
+                                </div>
+                                <div class="tutor">
+                                    <h2 class="titulo2">Dados do tutor</h2>
+                                    <div class="organizacao">
+                                        <label for="nomeTutor">Nome:</label>
+                                        <input type="text" id="nomeTutor" name="nome" required>
+                                    </div>
+
+                                    <div class="organizacao">
+                                        <label for="numero">Telefone:</label>
+                                        <input type="number" id="numero" required>
+                                    </div>
+
+                                    <div class="organizacao">
+                                        <label for="email">Email:</label>
+                                        <input type="email" name="email" required>
+                                    </div>
+
+                                    <div class="organizacao">
+                                        <label for="senha">Senha:</label>
+                                        <input type="password" name="senha" required>
+                                    </div>
+
+                                    <div class="organizacao">
+                                        <label for="obs">Observações:</label>
+                                        <textarea id="obs" name="obs"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                            <button type="submit" class="botao">Cadastrar</button>
                         </div>
                     </div>
 
-                    <button type="submit" class="botao">Login</button>
                 </div>
-
-                <div class="cadastro">
-                    <form action="#" method="POST" class="formularioCadastro">
-                        <h3 >Dados do Pet</h3>
-
-                        <div class="organizacao">
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" required>
-                        </div>
-
-                        <div class="organizacao">
-                            <label for="idade">Idade:</label>
-                            <input type="number" id="idade" name="idade" required>
-                        </div>
-
-                        <div class="organizacao">
-                            <label for="especie">Espécie:</label>
-                            <select id="especie" name="especie" required>
-                                <option value="cachorro">Cachorro</option>
-                                <option value="gato">Gato</option>
-                                <option value="passaro">Pássaro</option>
-                            </select>
-                        </div>
-
-                        <div class="organizacao">
-                            <label for="raca">Raça:</label>
-                            <input type="text" id="raca" name="raca" required>
-                        </div>
-
-                        <div class="organizacao">
-                            <label for="sexo">Sexo:</label>
-                            <select id="sexo" name="sexo" required>
-                                <option value="femea">Fêmea</option>
-                                <option value="macho">Macho</option>
-                            </select>
-                        </div>
-                        <div class="tutor">
-                            <h2 class="titulo2">Dados do tutor</h2>
-                            <div class="organizacao">
-                                <label for="nomeTutor">Nome:</label>
-                                <input type="text" id="nomeTutor" name="nome" required>
-                            </div>
-
-                            <div class="organizacao">
-                                <label for="numero">Telefone:</label>
-                                <input type="number" id="numero" required>
-                            </div>
-
-                            <div class="organizacao">
-                                <label for="email">Email:</label>
-                                <input type="email" name="email" required>
-                            </div>
-
-                            <div class="organizacao">
-                                <label for="senha">Senha:</label>
-                                <input type="password" name="senha" required>
-                            </div>
-
-                            <div class="organizacao">
-                                <label for="obs">Observações:</label>
-                                <textarea id="obs" name="obs"></textarea>
-                            </div>
-                        </div>
-                    </form>
-                    <button type="submit" class="botao">Cadastrar</button>
-                </div>
-
             </div>
         </div>
     </main>
+
+    <script src="src/js/index.js"></script>
 </body>
 
 </html>

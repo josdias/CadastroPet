@@ -95,3 +95,23 @@ select{
         background-image: url("../img/backgrond-cachorro3.jpg");
     }
 }
+
+@media screen and (max-width: 768px){
+
+    body{
+        background-color: #FF872D;
+    }
+
+    @keyframes animate{none}
+
+    .titulo{
+        top:15%;
+    }
+
+    .box{
+        right: 5%;
+        left: 5%;
+        width: 285px;
+        background-color: ;
+    }
+}

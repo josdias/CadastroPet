@@ -9,7 +9,7 @@
     padding: 20px;
     text-align: center;
     border-radius:15px;
-    width: 400px;
+    width: 550px;
     z-index: 2;
 }
 
@@ -28,6 +28,7 @@
     height: 20px;
     border-radius: 100%;
     transition: 0.6s;
+    cursor: pointer;
 
 }
 
@@ -46,4 +47,19 @@
 
 .remover{
     display: none;
+}
+
+@media screen and (max-width: 500px){
+    .cadastro{
+        width: 70%;
+        height: 90%;
+    }
+
+    .inputCadastro{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
 }

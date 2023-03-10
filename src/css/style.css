@@ -12,17 +12,32 @@ body{
 
 
 input{
-    width: 160px;
+    width: 366px;
+    height: 30px;
     border-radius: 5px;
     border-width: 0.5px;
 }
 
 select{
-    width: 100px;
     font-family: 'Tilt Neon', cursive;
+    width: 372px;
+    height: 34px;
+    border-radius: 5px;
+    border-width: 0.5px;
 }
 
+textarea{
+    width: 366px;
+    height: 50px; 
+    border-radius: 5px;
+    border-width: 0.5px;
+}
 
+h3{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 16px 0;
+}
 
 .container{
     position: absolute;
@@ -48,8 +63,8 @@ select{
 }
 
 .box{
-    width: 400px;
-    height: 400px;
+    width: 448px;
+    height: 500px;
     border-radius: 15px;
     box-shadow: 10px 10px 5px 2px rgb(0 0 0 / 30%);
     font-size: 20px;
@@ -84,7 +99,32 @@ select{
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    margin: 7px 0;
+    margin: 16px 0;
+}
+
+.acao{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.btnCadastro{
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    width: 30%;
+    cursor: pointer;
+    margin: 16px 0;
+    border-radius: 5px;
+}
+
+.btnCadastro:hover{
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.6s;
+    width: 30%;
 }
 
 .botao{
@@ -94,30 +134,64 @@ select{
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.6s;
     margin: 16px 0;
-    width: 100%;
+    width: 30%;
 }
 
 .botao:hover{
     background-color: transparent;
     border: 1px solid #ffffff;
-    transition: 2s;
+    color: #4CAF50;
+    transition: 0.6s;
 }
 
 .remove{ 
     display: none;
     
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 500px){
 
     body{
         background-color: #FF872D;
     }
 
+    input{
+        width: 100%;
+        height: 20px;
+    }
+
+    select{
+        width: 67%;
+        height: 20px;
+    }
+
+    label{
+        font-size: 16px;
+    }
+    
+    h3{
+        font-size: 16px;
+    }
+
     .box{
-        right: 5%;
-        left: 5%;
         width: 285px;
+        top: 10%;
+    }
+
+    .botao{
+        width: 50%;
+    }
+
+    .acao{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .container{
+        top: 20%;
     }
 }

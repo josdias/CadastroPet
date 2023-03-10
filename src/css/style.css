@@ -41,7 +41,7 @@ h3{
 
 .container{
     position: absolute;
-    top: 25%;
+    top: 20%;
 }
 
 .centro{
@@ -189,9 +189,3 @@ h3{
     }
 }
 
-
-@media screen and (max-width: 768px){
-    .container{
-        top: 20%;
-    }
-}

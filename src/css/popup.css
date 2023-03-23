@@ -46,6 +46,21 @@
     display: block;
 }
 
+.btnCadastrar:disabled{
+    background-color: lightgray;
+}
+.btnCadastrar{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.6s;
+    margin: 16px 0;
+    width: 30%;
+}
+
 @media screen and (max-width: 500px){
     .cadastro{
         width: 70%;

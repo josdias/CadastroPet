@@ -41,73 +41,77 @@
                 </div>
                 <div id="popup" class="cadastro">
                     <div class="btnFechar">
-                        <button class="fechar-popup" id="fechar-popup" onclick="fecharCadastro()">X</button>
+                        <button class="fechar-popup" id="fechar-popup" type="reset"
+                            onclick="fecharCadastro()">X</button>
                     </div>
 
                     <div>
-                        <form action="#" method="POST" class="formularioCadastro">
+                        <form action="#" method="POST" class="formularioCadastro" id="formularioCadastro">
                             <h3>Dados do Pet</h3>
 
-                            <div class="organizacao">
-                                <label for="nome">Nome:</label>
-                                <input class="inputCadastro" type="text" id="nome" name="nome" required>
-                            </div>
-
-                            <div class="organizacao">
-                                <label for="idade">Idade:</label>
-                                <input class="inputCadastro" type="number" id="idade" name="idade" required>
-                            </div>
-
-                            <div class="organizacao">
-                                <label for="especie">Espécie:</label>
-                                <select id="especie" name="especie" required>
-                                    <option value="cachorro">Cachorro</option>
-                                    <option value="gato">Gato</option>
-                                    <option value="passaro">Pássaro</option>
-                                </select>
-                            </div>
-
-                            <div class="organizacao">
-                                <label for="raca">Raça:</label>
-                                <input class="inputCadastro" type="text" id="raca" name="raca" required>
-                            </div>
-
-                            <div class="organizacao">
-                                <label for="sexo">Sexo:</label>
-                                <select id="sexo" name="sexo" required>
-                                    <option value="femea">Fêmea</option>
-                                    <option value="macho">Macho</option>
-                                </select>
-                            </div>
-                            <div class="tutor">
-                                <h3>Dados do tutor</h3>
+                            <div class="dados">
                                 <div class="organizacao">
-                                    <label for="nomeTutor">Nome:</label>
-                                    <input class="inputCadastro" type="text" id="nomeTutor" name="nome" required>
+                                    <label for="nome">Nome:</label>
+                                    <input class="inputCadastro" type="text" id="nome" name="nome" required oninput="validarFormulario()" autofocus>
                                 </div>
 
                                 <div class="organizacao">
-                                    <label for="numero">Telefone:</label>
-                                    <input class="inputCadastro" type="number" id="numero" required>
+                                    <label for="idade">Idade:</label>
+                                    <input class="inputCadastro" type="number" id="idade" name="idade"
+                                        title="Preencha a Idade do animal" required oninput="validarFormulario()">
                                 </div>
 
                                 <div class="organizacao">
-                                    <label for="email">Email:</label>
-                                    <input class="inputCadastro" type="email" name="email" required>
+                                    <label for="especie">Espécie:</label>
+                                    <select id="especie" name="especie" required oninput="validarFormulario()">
+                                        <option value="cachorro">Cachorro</option>
+                                        <option value="gato">Gato</option>
+                                        <option value="passaro">Pássaro</option>
+                                    </select>
                                 </div>
 
                                 <div class="organizacao">
-                                    <label for="senha">Senha:</label>
-                                    <input class="inputCadastro" type="password" name="senha" required>
+                                    <label for="raca">Raça:</label>
+                                    <input class="inputCadastro" type="text" id="raca" name="raca" required oninput="validarFormulario()">
                                 </div>
 
                                 <div class="organizacao">
-                                    <label for="obs">Observações:</label>
-                                    <textarea id="obs" name="obs" maxlength="200"></textarea>
+                                    <label for="sexo">Sexo:</label>
+                                    <select id="sexo" name="sexo" required oninput="validarFormulario()">
+                                        <option value="femea">Fêmea</option>
+                                        <option value="macho">Macho</option>
+                                    </select>
+                                </div>
+                                <div class="tutor">
+                                    <h3>Dados do tutor</h3>
+                                    <div class="organizacao">
+                                        <label for="nomeTutor">Nome:</label>
+                                        <input class="inputCadastro" type="text" id="nomeTutor" name="nome" required oninput="validarFormulario()">
+                                    </div>
+
+                                    <div class="organizacao">
+                                        <label for="telefone">Telefone:</label>
+                                        <input class="inputCadastro" type="tel" id="telefone" maxlength="14" required oninput="validarFormulario()">
+                                    </div>
+
+                                    <div class="organizacao">
+                                        <label for="email">Email:</label>
+                                        <input class="inputCadastro" type="email" name="email" required oninput="validarFormulario()">
+                                    </div>
+
+                                    <div class="organizacao">
+                                        <label for="senha">Senha:</label>
+                                        <input class="inputCadastro" type="password" name="senha" minlength="8" required oninput="validarFormulario()">
+                                    </div>
+
+                                    <div class="organizacao">
+                                        <label for="obs">Observações:</label>
+                                        <textarea id="obs" name="obs" maxlength="200"></textarea>
+                                    </div>
                                 </div>
                             </div>
+                            <button type="submit" class="btnCadastrar" id="btnCadastrar" disabled>Cadastrar</button>
                         </form>
-                        <button type="submit" class="botao">Cadastrar</button>
                     </div>
                 </div>
             </div>
@@ -115,6 +119,8 @@
     </main>
 
     <script src="src/js/index.js"></script>
+    <script src="src/js/masked.js"></script>
+    <script src="src/js/validacao.js"></script>
 </body>
 
 </html>

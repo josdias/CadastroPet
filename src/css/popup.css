@@ -11,6 +11,7 @@
     border-radius:15px;
     width: 550px;
     z-index: 2;
+    
 }
 
 .btnFechar{
@@ -45,14 +46,9 @@
     display: block;
 }
 
-.remover{
-    display: none;
-}
-
 @media screen and (max-width: 500px){
     .cadastro{
         width: 70%;
-        height: 90%;
     }
 
     .inputCadastro{
